@@ -6,7 +6,7 @@ Auto downsample version of prometheus. It just for some one who want to save lon
 * Add auto downsample feature by modify promql a little bit and storage a little bit more.
 * Just run without problems for now, no union test (also may break exist test).
 * Origin retention is useless now, won't drop any data, just downsample to the next retention level.
-* A small problem while use with grafana(should set "null connected" if your query step set smaller than retention level's interval), some step get a zerosample because of after downsaple gap is larger and step is decided by the defined retention, should be dev a new plugin for this version prometheus.
+* A small problem while use with grafana(should set "null connected" if your query step set smaller than retention level's interval), some step get a zerosample because of after downsaple gap is larger and step is decided by the defined retention, should be dev a new grafana plugin for this version prometheus when free.
 
 # Usage
 * Change retention in storage/local/retentions.go, see func init().
